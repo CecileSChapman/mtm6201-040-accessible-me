@@ -38,16 +38,16 @@
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
         <h1>Meet the owner</h1>
-        <ul itemscope itemtype="https://schema.org/Person">
-          <li itemprop="name">Name: John Doe</li>
+        <ul itemscope itemtype="https://schema.org/Organization">
+          <li itemprop="employee">Name: John Doe</li>
           <li itemprop="jobTitle">Title: CEO</li>
           <li itemprop="email">Email: johnjoe@jambox.ca</li>
           <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
         <h1>Address</h1>
-        <div itemscope itemtype="https://schema.org/Person">
+        <div itemscope itemtype="https://schema.org/Organization">
           <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <span itemprop="name">Jambox Studios</span>
+            <span itemprop="legalName">Jambox Studios</span>
             <span itemprop="streetAddress">123 Guitar Road,</span>
             <span itemprop="addressLocality">Musicville,</span> 
             <span itemprop="addressCountry">Danceistan</span>
@@ -57,11 +57,11 @@
       </div>
       <div class="contact-section">
         <h1>Contact Us</h1>
-        <form action="thanks.html" role="form" id="form">
+        <form action="thanks.html" role="form" id="form" itemscope itemtype="https://schema.org/Person">
           <label for="yourname">Full Name</label>
-          <input type="text" id="yourname" name="yourname" placeholder="Full Name">
+          <input type="text" id="yourname" name="yourname" placeholder="Full Name" itemprop="name">
           <label for="youremail">Email</label>
-          <input type="text" id="youremail" name="youremail" placeholder="Email">
+          <input type="text" id="youremail" name="youremail" placeholder="Email" itemprop="email">
           <label for="emailsubject">Subject</label>
           <input type="text" id="emailsubject" name="emailsubject" placeholder="Subject">
           <label for="yourmessage"><b>Your Message</b></label>
