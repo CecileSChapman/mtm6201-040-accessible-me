@@ -16,19 +16,21 @@
   <div class="container" id="top">
     <header class="site-header">
       <ul class="skip-links">
-      <li><a href="#main">Skip to main content</a></li>
-      <li><a href="#form">Skip to contact form</a></li>
+      <li><a href="#main" aria-label="Skip to main content">Skip to main content</a></li>
+      <li><a href="#form" aria-label="Skip to contact form">Skip to contact form</a></li>
       </ul>
       <h1>Jam Box Studios</h1>
       <nav class="main-nav" role="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a href="#" aria-label="Go to the Homepage">Home</a></li>
+          <li><a href="#" aria-label="Go to Products page">Products</a></li>
+          <li><a href="#" aria-label="Go to Reservation page">Reservation</a></li>
+          <li><a href="#" aria-label="Go to Studio page">Studio</a></li>
         </ul>
       </nav>
-      <img src="https://placekitten.com/1200/900" alt="photograph of a kitten" class="banner" role="banner">
+      <div role="banner">
+      <img src="https://placekitten.com/1200/900" alt="photograph of a kitten" class="banner">
+      </div>
     </header>
     <main class="main-content" id="main" role="main">
       <h1>Welcome to Jam Box</h1>
@@ -36,19 +38,22 @@
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
       <div class="owner">
         <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
         <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
+        <div itemscope itemtype="https://schema.org/Person">
+          <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="name">Jambox Studios</span>
+            <span itemprop="streetAddress">123 Guitar Road,</span>
+            <span itemprop="addressLocality">Musicville,</span> 
+            <span itemprop="addressCountry">Danceistan</span>
+            <span itemprop="postalCode">B3T 0L0</span>
+          </p>
+        </div>
       </div>
       <div class="contact-section">
         <h1>Contact Us</h1>
@@ -59,15 +64,15 @@
           <input type="text" id="youremail" name="youremail" placeholder="Email">
           <label for="emailsubject">Subject</label>
           <input type="text" id="emailsubject" name="emailsubject" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+          <label for="yourmessage"><b>Your Message</b></label>
+          <textarea id="yourmessage" name="yourmessage" placeholder="Write your message here..."></textarea>
           <button type="submit" role="button">Send</button>
         </form>
       </div>
     </main>
     <footer class="site-footer">
       &copy; 2021 Jam Box Studios 
-      <a href="#top">Back to top</a>
+      <a href="#top" aria-label="Go back to the top">Back to top</a>
     </footer>
   </div>
 </body>

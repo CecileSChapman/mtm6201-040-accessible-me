@@ -97,3 +97,7 @@ nav ul li a:hover {
 .skip-links a:focus{
   top: 0;
 }
+
+button {
+  cursor: pointer;
+  }
